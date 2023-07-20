@@ -1,0 +1,19 @@
+{% extends 'main.html' %}
+{% block content %}
+<form action="/upload" method="POST" enctype="multipart/form-data">
+  <input type="file" name="file">
+  <button type="submit">Upload</button>
+</form>
+<h2>Result</h2>
+    <h4>{{result}}</h4>
+
+<script>
+  const form = document.querySelector('form');
+  form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    const response = await fetch('/upload', { method: 'POST', body: formData });
+    console.log(response.status);
+  });
+</script>
+{% endblock %}

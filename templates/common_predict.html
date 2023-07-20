@@ -1,0 +1,36 @@
+{% extends 'main.html' %}
+{% block content %}
+<div class=row style="margin:0">
+    <div class="content">
+        <div class="banner">
+            <div class="child">
+                <div id="uploadArea" class="upload-area">
+                    <div class="upload-area__header">
+                      <h2 class="upload-area__title" style=" margin-top:10px;text-align: center;color: #13065c; font-size: 28px;font-weight: bolder;font-family:'Times New Roman', Times, serif">Common Diseases Prediction</h2>
+                    <h6>Upload your x-ray 
+                    <svg height="35px"  width="35px" viewBox="0 0 22 40" fill="none" x="0px" y="0px"><path fill-rule="evenodd" clip-rule="evenodd" d="M9 19.5C9.55228 19.5 10 19.9477 10 20.5V21C10 21.5523 10.4477 22 11 22H21C21.5523 22 22 21.5523 22 21V20.5C22 19.9477 22.4477 19.5 23 19.5C23.5523 19.5 24 19.9477 24 20.5V21C24 22.6569 22.6569 24 21 24H11C9.34315 24 8 22.6569 8 21V20.5C8 19.9477 8.44772 19.5 9 19.5Z" fill="black"/><path fill-rule="evenodd" clip-rule="evenodd" d="M16 20C15.4477 20 15 19.5523 15 19V10.4677L12.7179 12.8211C12.3334 13.2176 11.7003 13.2274 11.3039 12.8429C10.9074 12.4584 10.8976 11.8253 11.2821 11.4289L15.2821 7.30385C15.4704 7.10962 15.7295 7 16 7C16.2706 7 16.5296 7.10962 16.7179 7.30385L20.7179 11.4289C21.1024 11.8253 21.0926 12.4584 20.6961 12.8429C20.2997 13.2274 19.6666 13.2176 19.2821 12.8211L17 10.4677V19C17 19.5523 16.5523 20 16 20Z" fill="black"/><text x="0" y="47" fill="#000000"></svg>
+                    </h6>
+                    <p class="upload-area__paragraph">
+                        Enter Symptoms and click submit to
+                    </p>
+                  </div>
+                  <form>
+                    <input type="search" name="message" id="user_input">
+                  </form>
+                  <input type="button" value="add" onclick="showInput();">
+                    <div id="dropZoon" class="upload-area__drop-zoon drop-zoon">
+                    <span class="drop-zoon__icon">
+                        <p><span id='display' style="color:#13065c"></span></p>
+                    </span>
+            </div>
+            </div>
+        </div>
+</div>
+</div>
+<script language="JavaScript">
+    function showInput() {
+        document.getElementById('display').innerHTML = document.getElementById("user_input").value;
+    }
+  </script>
+{% endblock %}
+<!------------------>
